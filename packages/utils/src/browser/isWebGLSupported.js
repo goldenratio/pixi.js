@@ -44,7 +44,8 @@ export function isWebGLSupported()
  * @param {WebGLContextAttributes} contextOptions
  * @return {WebGLRenderingContext}
  */
-function getWebGLRenderingContext(contextOptions) {
+function getWebGLRenderingContext(contextOptions)
+{
     const canvas = document.createElement('canvas');
 
     const gl = /** @type {WebGLRenderingContext} **/ (canvas.getContext('webgl', contextOptions)
