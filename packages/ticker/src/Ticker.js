@@ -525,7 +525,8 @@ export default class Ticker
      * @return {Ticker|undefined}
      * @private
      */
-    static get _shared() {
+    static get _shared()
+    {
         return Ticker._shared;
     }
 
@@ -533,7 +534,8 @@ export default class Ticker
      * @param {Ticker} ticker
      * @private
      */
-    static set _shared(ticker) {
+    static set _shared(ticker)
+    {
         Ticker._shared = ticker;
     }
 }
