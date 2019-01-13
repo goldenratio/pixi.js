@@ -107,7 +107,7 @@ export default class TextStyle
      * Creates a new TextStyle object with the same values as this one.
      * Note that the only the properties of the object are cloned.
      *
-     * @return {PIXI.TextStyle} New cloned TextStyle object
+     * @return {TextStyle} New cloned TextStyle object
      */
     clone()
     {
@@ -710,7 +710,7 @@ export default class TextStyle
 /**
  * Utility function to convert hexadecimal colors to strings, and simply return the color if it's a string.
  * @private
- * @param {number|number[]} color
+ * @param {number|string} color
  * @return {string} The color as a string.
  */
 function getSingleColor(color)
@@ -735,7 +735,7 @@ function getSingleColor(color)
  * This version can also convert array of colors
  * @private
  * @param {number|number[]} color
- * @return {string} The color as a string.
+ * @return {string|string[]} The color as a string.
  */
 function getColor(color)
 {
@@ -745,12 +745,13 @@ function getColor(color)
     }
     else
     {
+        let colors = [];
         for (let i = 0; i < color.length; ++i)
         {
-            color[i] = getSingleColor(color[i]);
+            colors[i] = getSingleColor(color[i]);
         }
 
-        return color;
+        return colors;
     }
 }
 
@@ -790,7 +791,7 @@ function areArraysEqual(array1, array2)
  * @private
  * @param {Object} target Target object to copy properties into
  * @param {Object} source Source object for the properties to copy
- * @param {string} propertyObj Object containing properties names we want to loop over
+ * @param {Object} propertyObj Object containing properties names we want to loop over
  */
 function deepCopyProperties(target, source, propertyObj) {
     for (const prop in propertyObj) {
