@@ -208,7 +208,7 @@ export default class Ticker
      * @param {Function} fn - The listener function to be added for updates
      * @param {Function} [context] - The listener context
      * @param {number} [priority=PIXI.UPDATE_PRIORITY.NORMAL] - The priority for emitting
-     * @returns {PIXI.Ticker} This instance of a ticker
+     * @returns {Ticker} This instance of a ticker
      */
     add(fn, context, priority = UPDATE_PRIORITY.NORMAL)
     {
@@ -221,7 +221,7 @@ export default class Ticker
      * @param {Function} fn - The listener function to be added for one update
      * @param {Function} [context] - The listener context
      * @param {number} [priority=PIXI.UPDATE_PRIORITY.NORMAL] - The priority for emitting
-     * @returns {PIXI.Ticker} This instance of a ticker
+     * @returns {Ticker} This instance of a ticker
      */
     addOnce(fn, context, priority = UPDATE_PRIORITY.NORMAL)
     {
@@ -235,7 +235,7 @@ export default class Ticker
      *
      * @private
      * @param {TickerListener} listener - Current listener being added.
-     * @returns {PIXI.Ticker} This instance of a ticker
+     * @returns {Ticker} This instance of a ticker
      */
     _addListener(listener)
     {
@@ -280,7 +280,7 @@ export default class Ticker
      *
      * @param {Function} fn - The listener function to be removed
      * @param {Function} [context] - The listener context to be removed
-     * @returns {PIXI.Ticker} This instance of a ticker
+     * @returns {Ticker} This instance of a ticker
      */
     remove(fn, context)
     {
@@ -519,5 +519,21 @@ export default class Ticker
         }
 
         return Ticker._shared;
+    }
+
+    /**
+     * @return {Ticker|undefined}
+     * @private
+     */
+    static get _shared() {
+        return Ticker._shared;
+    }
+
+    /**
+     * @param {Ticker} ticker
+     * @private
+     */
+    static set _shared(ticker) {
+        Ticker._shared = ticker;
     }
 }

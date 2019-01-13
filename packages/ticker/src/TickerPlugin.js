@@ -67,7 +67,7 @@ export default class TickerPlugin
 
         /**
          * Internal reference to the ticker
-         * @type {PIXI.Ticker}
+         * @type {Ticker}
          * @name _ticker
          * @memberof PIXI.Application#
          * @private
@@ -76,7 +76,7 @@ export default class TickerPlugin
 
         /**
          * Ticker for doing render updates.
-         * @type {PIXI.Ticker}
+         * @type {Ticker}
          * @name ticker
          * @memberof PIXI.Application#
          * @default PIXI.Ticker.shared

@@ -19,7 +19,7 @@ import { DATA_URI } from '../const';
  * @memberof PIXI.utils
  * @function decomposeDataUri
  * @param {string} dataUri - the data URI to check
- * @return {PIXI.utils.DecomposedDataUri|undefined} The decomposed data uri or undefined
+ * @return {DecomposedDataUri|undefined} The decomposed data uri or undefined
  */
 export function decomposeDataUri(dataUri)
 {
