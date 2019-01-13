@@ -6,7 +6,6 @@ import { BLEND_MODES } from '@pixi/constants';
  * @memberof PIXI.utils
  * @function mapPremultipliedBlendModes
  * @private
- * @param {Array<number[]>} [array] - The array to output into.
  * @return {Array<number[]>} Mapped modes.
  */
 function mapPremultipliedBlendModes()

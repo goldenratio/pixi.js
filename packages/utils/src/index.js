@@ -44,7 +44,7 @@ export { removeItems };
  * @class EventEmitter
  * @type {EventEmitter}
  */
-import EventEmitter from 'eventemitter3';
+import { EventEmitter } from 'eventemitter3';
 export { EventEmitter };
 
 /**

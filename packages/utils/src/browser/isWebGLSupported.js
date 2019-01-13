@@ -11,13 +11,12 @@ export function isWebGLSupported()
 
     try
     {
-        if (!window.WebGLRenderingContext)
+        if (typeof WebGLRenderingContext === 'undefined')
         {
             return false;
         }
 
-        const canvas = document.createElement('canvas');
-        let gl = canvas.getContext('webgl', contextOptions) || canvas.getContext('experimental-webgl', contextOptions);
+        let gl = getWebGLRenderingContext(contextOptions);
 
         const success = !!(gl && gl.getContextAttributes().stencil);
 
@@ -41,3 +40,16 @@ export function isWebGLSupported()
     }
 }
 
+/**
+ * @param {WebGLContextAttributes} contextOptions
+ * @return {WebGLRenderingContext}
+ */
+function getWebGLRenderingContext(contextOptions) {
+    const canvas = document.createElement('canvas');
+
+    const gl = /** @type {WebGLRenderingContext} **/ (canvas.getContext('webgl', contextOptions)
+        || canvas.getContext('experimental-webgl', contextOptions)
+    );
+
+    return gl;
+}

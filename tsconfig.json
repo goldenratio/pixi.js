@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "noEmit": true,
+        "allowJs": true,
+        "checkJs": true,
+        "strict": false,
+        "noImplicitAny": false,
+        "noUnusedLocals": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "target": "esnext",
+        "baseUrl": ".",
+        "paths": {
+            "@pixi/*": [
+                "./packages/*/src",
+                "./packages/canvas/*/src",
+                "./packages/filters/*/src"
+            ]
+        },
+        "lib": [
+            "esnext",
+            "dom"
+        ],
+        "typeRoots": [
+            "node_modules/@types"
+        ]
+    },
+    "include": [
+        "./bundles/pixi.js/src/**/*"
+    ]
+}

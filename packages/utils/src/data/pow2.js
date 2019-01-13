@@ -1,3 +1,4 @@
+// @ts-nocheck
 // Taken from the bit-twiddle package
 
 /**

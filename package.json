@@ -27,7 +27,8 @@
     "postdist": "copyfiles -f \"bundles/*/dist/*\" dist",
     "prerelease": "npm run clean:build && npm test",
     "postversion": "npm run build && npm run build:min",
-    "release": "lerna publish"
+    "release": "lerna publish",
+    "typecheck": "tsc"
   },
   "pre-commit": [
     "lintfix"
@@ -37,6 +38,7 @@
     "@lerna/filter-packages": "^3.6.0",
     "@lerna/project": "^3.8.5",
     "@pixi/jsdoc-template": "^2.4.2",
+    "@types/webgl2": "0.0.4",
     "copyfiles": "^2.1.0",
     "electron": "^4.0.1",
     "eslint": "^5.10.0",

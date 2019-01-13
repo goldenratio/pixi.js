@@ -116,6 +116,7 @@ if (typeof window !== 'undefined')
         utils,
     };
 
+    // @ts-nocheck
     window.PIXI = Object.assign(
         PIXI,
         namespaces,
@@ -137,6 +138,7 @@ if (typeof window !== 'undefined')
         textBitmap,
         ticker
     );
+    // @ts-check
 
     // Deprecations only apply to Window object
     deprecated(PIXI);

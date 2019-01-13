@@ -28,10 +28,10 @@ export function hex2rgb(hex, out)
  */
 export function hex2string(hex)
 {
-    hex = hex.toString(16);
-    hex = '000000'.substr(0, 6 - hex.length) + hex;
+    const hexStr = hex.toString(16);
+    const hexStrVal = '000000'.substr(0, 6 - hexStr.length) + hex;
 
-    return `#${hex}`;
+    return `#${hexStrVal}`;
 }
 
 /**

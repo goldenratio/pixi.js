@@ -7,6 +7,7 @@ import { DATA_URI } from '../const';
  * @typedef {object} DecomposedDataUri
  * @property {string} mediaType Media type, eg. `image`
  * @property {string} subType Sub type, eg. `png`
+ * @property {string} charset
  * @property {string} encoding Data encoding, eg. `base64`
  * @property {string} data The actual data
  */

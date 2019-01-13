@@ -31,6 +31,7 @@ bundles/*/*.d.ts
 
 # jetBrains IDE ignores
 .idea
+*.iml
 
 # VSCode ignores
 .vscode
